@@ -5,10 +5,10 @@ metadata:
 spec:
   ports:
   - nodePort: 31001
-    port: 80
+    port: 31001
     protocol: TCP
-    targetPort: backed-port
+    targetPort: 8000
   selector:
-    run: acaisoft-backend
+    app: acaisoft-backend
   sessionAffinity: None
-  type: LoadBalancer
+  type: NodePort
