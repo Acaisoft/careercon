@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: acaisoft-backend
+    spec:
+      containers:
+      - name: careercon-backend
+        image: acaisoft/careercon-backend
+        ports:
+        - name: backend-port
+          containerPort: 8080
