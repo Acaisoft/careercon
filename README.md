@@ -10,7 +10,7 @@
 ## Frontend
     Building frontend:
         - go to careercon/frontend
-        - go to frontend folder
+        - change src/environments/environment.prod.ts backendEndpoint
         - npm install
         - npm run build
     Building docker image:
