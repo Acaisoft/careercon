@@ -1,10 +1,10 @@
 # CareerCon
 
 ## Backend
-    Buildind docker image:
+    Building docker image:
         - go to careercon/backend
         - docker build -t backend-image .
-    Publishin docker image:
+    Publishing docker image:
         - docker login
         - docker push backend-image
 ## Frontend
