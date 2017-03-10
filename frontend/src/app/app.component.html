@@ -1,0 +1,17 @@
+<i class="fa fa-spinner fa-pulse fa-3x fa-fw main-loader" *ngIf="!isReady"></i>
+
+<div class="main animated fadeIn" *ngIf="isReady">
+  <img src="../assets/logo.png" class="logo">
+
+  <div class="row">
+    <div class="col-sm-12 notEnoughNodes" *ngIf="nodesCollection.nodeList.length == 0">
+      <i class="fa fa-spinner fa-pulse"></i> Waiting for nodes...
+    </div>
+    <div *ngFor="let i = index; let node of nodesCollection.nodeList | sortByBool: 'isOnline'" class="col-xs-6 col-sm-4">
+      <app-activity-node [nodeData]="node"></app-activity-node>
+    </div>
+  </div>
+  <div class="main__footer">
+    Requests sent: <b>{{requestCount}}</b>
+  </div>
+</div>

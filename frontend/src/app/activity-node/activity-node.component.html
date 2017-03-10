@@ -1,0 +1,11 @@
+<div class="node animated" (click)="updateNode()"
+     [ngClass]="{'node__offline': !nodeData.isOnline, 'pulse node__highlighted': nodeData.highlighted}">
+  <div class="node__title">{{nodeData.status}}</div>
+  <div class="node__id">{{nodeData.appId}}</div>
+  <div class="node__version">ver.: <b>{{nodeData.version}}</b></div>
+  <div class="node__time"><i>{{nodeData.time | date: 'jms'}}</i></div>
+  <div class="node__tick">Tick count: <b>{{nodeData.tickCount}}</b></div>
+  <div class="node__online-icon">
+    <i class="fa fa-globe fa-3x"></i>
+  </div>
+</div>
