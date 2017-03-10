@@ -1,0 +1,125 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  font: 300 13px/1.4 "Open Sans", sans-serif !important;
+  color: #f8f8f8;
+  padding: 40px;
+}
+
+.background-color {
+  background-color: #211443 20%;
+  background-image: radial-gradient(farthest-side ellipse at 10% 0, #211443 20%, #5237c8);
+  background-image: -webkit-radial-gradient(10% 0, farthest-side ellipse, #211443 20%, #5237c8);
+  background-image: -moz-radial-gradient(10% 0, farthest-side ellipse, #211443 20%, #5237c8);
+  background-attachment: fixed, fixed;
+}
+
+.notEnoughNodes {
+  width: 100%;
+  text-align: center;
+  padding: 25px;
+  color: #000;
+  font-size: 18px;
+}
+
+.logo {
+  height: 70px;
+  margin: 10px auto 40px auto;
+  display: block;
+}
+
+.main-loader {
+  position: absolute;
+  top: 48%;
+  left: 48%;
+  color: #fff;
+}
+
+.main {
+  max-width: 800px;
+  height: 100%;
+  min-height: 320px;
+  background-color: #f9f9f9;
+  -webkit-box-shadow: 5px 5px 30px 0 rgba(0, 0, 0, 1);
+  -moz-box-shadow: 5px 5px 30px 0 rgba(0, 0, 0, 1);
+  box-shadow: 5px 5px 30px 0 rgba(0, 0, 0, 1);
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 20px 20px 40px 20px;
+  &__footer {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    color: #000;
+    font-size: 14px;
+  }
+}
+
+.node {
+  height: 100px;
+  width: 100%;
+  padding: 25px;
+  margin-bottom: 30px;
+  color: #000000;
+  transition: background-color 1s ease;
+  background-color: rgba(82, 55, 200, 0.18);
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+  position: relative;
+  &__title {
+    font-weight: bold;
+    position: absolute;
+    top: 23px;
+    left: 15px;
+    font-size: 14px;
+  }
+  &__id {
+    position: absolute;
+    top: 42px;
+    left: 15px;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 110px;
+  }
+  &__version {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    font-size: 14px;
+  }
+  &__time {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 8px;
+    font-weight: bold;
+  }
+  &__tick {
+    font-size: 12px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+  }
+  &__online-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #545454;
+    opacity: 0.4;
+  }
+  &__offline {
+    background-color: #ccc;
+    color: #545454;
+  }
+  &__highlighted {
+    background-color: rgba(90, 67, 239, 0.45);
+  }
+}
+
+.getButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
