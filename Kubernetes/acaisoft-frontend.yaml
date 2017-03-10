@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: frontend-deployment
+  name: acaisoft-frontend
 spec:
   replicas: 1
   template:
@@ -14,4 +14,4 @@ spec:
         image: acaisoft/careercon-frontend
         ports:
         - name: frontend-port
-          containerPort: 8000
+          containerPort: 80
