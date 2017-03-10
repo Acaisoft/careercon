@@ -1,4 +1,4 @@
-FROM python:3.6
+FROM python:3.6-slim
 
 # Update OS
 RUN sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list
@@ -22,6 +22,6 @@ WORKDIR /home/app
 # Expose port 8000 for uwsgi
 EXPOSE 8000
 
-#ENTRYPOINT ["uwsgi", "--http", "0.0.0.0:8000", "--wsgi-file", "/home/app/src/app.py", "--callable", "wsgi_app", "--processes", "1", "--threads", "1", "--logto", "/var/log/app_wsgi.log"]
-ENTRYPOINT ["python"]
-CMD ["src/app.py"]
+ENTRYPOINT ["uwsgi", "--http", "0.0.0.0:8000", "--wsgi-file", "/home/app/src/app.py", "--callable", "wsgi_app", "--processes", "1", "--threads", "1", "--logto", "/var/log/app_wsgi.log"]
+#ENTRYPOINT ["python"]
+#CMD ["src/app.py"]
