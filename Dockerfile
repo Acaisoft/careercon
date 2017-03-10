@@ -1,4 +1,4 @@
-FROM python:3.6
+FROM python:3.6-slim
 
 # Update OS
 RUN sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list
