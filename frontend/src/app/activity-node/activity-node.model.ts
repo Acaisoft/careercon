@@ -80,7 +80,13 @@ export class ActivityNode {
       }
     } else {
       this.blankHits++;
-      if (this.blankHits >= nodeCount * 2) {
+      let tempCount = 0;
+      if (nodeCount > 3) {
+        tempCount = 2;
+      } else {
+        tempCount = 3;
+      }
+      if (this.blankHits >= nodeCount * tempCount) {
         this.isOnline = false;
         this.status = 'Disconnected';
         this.highlighted = false;

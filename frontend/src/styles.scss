@@ -1,5 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
+$media-mxs: (
+  'query': "(max-width: 500px)",
+  'minquery': "(min-width: 1px)",
+);
+
+@mixin media($mediaMap, $key: 'query') {
+  @media #{map-get($mediaMap, $key)} {
+    @content;
+  }
+}
+
 body {
   font: 300 13px/1.4 "Open Sans", sans-serif !important;
   color: #f8f8f8;
@@ -115,6 +126,13 @@ body {
   }
   &__highlighted {
     background-color: rgba(90, 67, 239, 0.45);
+  }
+}
+
+.changeWidth {
+  @include media($media-mxs) {
+    width: 100% !important;
+    display: block !important;
   }
 }
 

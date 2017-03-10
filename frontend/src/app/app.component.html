@@ -7,7 +7,7 @@
     <div class="col-sm-12 notEnoughNodes" *ngIf="nodesCollection.nodeList.length == 0">
       <i class="fa fa-spinner fa-pulse"></i> Waiting for nodes...
     </div>
-    <div *ngFor="let i = index; let node of nodesCollection.nodeList | sortByBool: 'isOnline'" class="col-xs-6 col-sm-4">
+    <div *ngFor="let i = index; let node of nodesCollection.nodeList | sortByBool: 'isOnline'" class="col-xs-6 col-sm-4 changeWidth">
       <app-activity-node [nodeData]="node"></app-activity-node>
     </div>
   </div>
